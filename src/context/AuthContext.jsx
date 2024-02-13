@@ -43,7 +43,8 @@ export function AuthProvider({ children }) {
   // https://zenn.dev/web_tips/articles/795b2a85fd2d97
 
   useEffect(() => {
-    const unsubscribed = app.onAuthStateChanged((user) => { //firebaseでuser情報の更新をするまではまだloadingするみたいな機能？
+    const unsubscribed = app.onAuthStateChanged((user) => {
+      //firebaseでuser情報の更新をするまではまだloadingするみたいな機能？
       setUser(user);
       setLoading(false);
     });
